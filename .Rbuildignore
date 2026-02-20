@@ -2,3 +2,6 @@
 ^renv\.lock$
 ^sfDM\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
+^dev$
+^README\.Rmd$
