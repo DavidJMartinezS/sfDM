@@ -78,5 +78,6 @@ st_add_sup_m2 <- function(sf, digits = 0) {
   sf %>% 
     dplyr::mutate(
       Sup_m2 = sf::st_area(geometry) %>% units::drop_units() %>% janitor::round_half_up(digits)
-    )
+    ) %>% 
+    {if(digits == 0) dplyr::mutate_at("Sup_m2", as.integer) else .[]}
 }
